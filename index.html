@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Mathematics | Iris Analysis</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #243047;
+      line-height: 1.7;
+    }
+    header {
+      background: #182c50;
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+    header h1 { font-size: 36px; margin-bottom: 12px; }
+    header p { color: #dce5f7; }
+    main { max-width: 950px; margin: 35px auto; padding: 0 18px; }
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 15px #152b4810;
+    }
+    h2 { color: #213e73; }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .stat {
+      background: #edf3fc;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .stat strong { display: block; font-size: 27px; color: #214c8c; }
+    .figure-link, .repo-link {
+      display: inline-block;
+      padding: 10px 17px;
+      margin: 8px 8px 8px 0;
+      background: #24559a;
+      color: white;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+    .figure-link:hover, .repo-link:hover { background: #173c70; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background: #edf3fc; }
+    code { background: #edf3fc; padding: 3px 6px; }
+    footer { text-align: center; padding: 28px; color: #65738a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Can Mathematics Help Us Distinguish Iris Flower Species?</h1>
+    <p>Advanced Mathematics Project | Data Analysis with Python</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Research Question</h2>
+      <p>
+        How can mathematical relationships between flower measurements
+        help distinguish different iris species?
+      </p>
+      <p>
+        This project explores differences in petal measurements and
+        the linear relationship between petal length and petal width.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Dataset</h2>
+      <p>
+        The Iris dataset contains 150 flowers from three species:
+        Iris-setosa, Iris-versicolor, and Iris-virginica.
+        Each flower has four numerical measurements in centimetres.
+      </p>
+      <div class="stat-grid">
+        <div class="stat"><strong>150</strong>Observations</div>
+        <div class="stat"><strong>3</strong>Species</div>
+        <div class="stat"><strong>4</strong>Measurements</div>
+        <div class="stat"><strong>0</strong>Missing values</div>
+      </div>
+      <p>
+        Data source:
+        <a href="https://archive.ics.uci.edu/dataset/53/iris">
+          UCI Machine Learning Repository
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Analysis One: Descriptive Statistics</h2>
+      <p>
+        The first analysis compares mean petal length, sample
+        variance, and sample standard deviation across species.
+      </p>
+      <table>
+        <tr><th>Species</th><th>Mean (cm)</th><th>SD (cm)</th></tr>
+        <tr><td>Setosa</td><td>1.464</td><td>0.174</td></tr>
+        <tr><td>Versicolor</td><td>4.260</td><td>0.470</td></tr>
+        <tr><td>Virginica</td><td>5.552</td><td>0.552</td></tr>
+      </table>
+      <p>
+        Setosa has the shortest petals on average, while Virginica
+        has the longest. The standard deviation also increases
+        across these three species.
+      </p>
+      <a class="figure-link" href="Figure1_Petal_Length.pdf" target="_blank">
+        View Figure 1 (PDF)
+      </a>
+    </section>
+
+    <section>
+      <h2>4. Analysis Two: Linear Regression</h2>
+      <p>
+        Ordinary least squares (OLS) estimates the relationship
+        between petal length (x) and petal width (y).
+      </p>
+      <p><strong>Estimated equation:</strong></p>
+      <p><code>Predicted petal width = 0.4164 × petal length − 0.3665</code></p>
+      <p><strong>R² = 0.9269</strong></p>
+      <p>
+        Approximately 92.69% of the variation in petal width
+        is explained by petal length in this pooled linear model.
+        The positive slope indicates that flowers with longer
+        petals tend to have wider petals.
+      </p>
+      <p>
+        Because the model combines all three species, the strong
+        relationship does not by itself establish how accurately
+        individual flowers can be classified.
+      </p>
+      <a class="figure-link" href="Figure2_Linear_Regression.pdf" target="_blank">
+        View Figure 2 (PDF)
+      </a>
+    </section>
+
+    <section>
+      <h2>5. Conclusion</h2>
+      <p>
+        The analyses show clear differences in average petal
+        length among iris species and a strong overall linear
+        association between petal length and width.
+      </p>
+      <p>
+        These mathematical patterns can help us understand
+        species differences, although further classification
+        analysis would be required to measure identification
+        accuracy for individual flowers.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Reproducibility</h2>
+      <p>
+        The public GitHub repository contains the original
+        dataset, Python notebook, and two PDF figures.
+      </p>
+      <a class="repo-link"
+         href="https://github.com/phuonglynguyenorient-web/advanced-math-iris-project">
+        View GitHub Repository
+      </a>
+    </section>
+  </main>
+
+  <footer>Advanced Mathematics Project | Iris Dataset Analysis</footer>
+</body>
+</html>
