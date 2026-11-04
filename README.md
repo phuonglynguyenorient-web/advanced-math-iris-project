@@ -1,40 +1,56 @@
+# Can Mathematics Help Us Distinguish Iris Flower Species?
+
 # 1. Research Question
 
-How have consumer prices evolved in Belgium between 2015 and 2025, and how has this affected the purchasing power of €100?
+How can mathematical relationships between flower measurements help distinguish different iris species?
 
 # 2. Project Objective
 
-This project aims to investigate the evolution of inflation in Belgium and its impact on purchasing power using mathematical analysis and Python.
+This project investigates differences in flower measurements among three iris species using statistical methods and linear regression in Python.
 
 # 3. Data Source
 
-The project will use historical Consumer Price Index (CPI) data for Belgium, obtained from an official statistical source such as Statbel or the World Bank.
+The dataset is the Iris dataset from the UCI Machine Learning Repository.
+
+Source: https://archive.ics.uci.edu/dataset/53/iris
+
+The dataset contains 150 observations, four numerical measurements and three iris species.
 
 # 4. Mathematical Analyses
 
-Two analyses are planned:
+## Analysis 1: Descriptive Statistics
 
-1. **Annual Inflation Rate:** Calculate the percentage change in the Consumer Price Index from one year to the next.
-2. **Purchasing Power:** Calculate how the purchasing power of a fixed amount of €100 changes over time.
+Calculate and compare the mean, variance and standard deviation of petal length for the three iris species.
+
+## Analysis 2: Linear Regression
+
+Investigate the relationship between petal length and petal width using a linear regression model:
+
+y = ax + b
+
+Evaluate the strength of the relationship using the coefficient of determination (R²).
 
 # 5. Visualisations
 
 The project will include at least two figures:
 
-- Annual inflation rate in Belgium.
-- Purchasing power of €100 over time.
+1. A comparison of petal lengths across the three iris species.
+2. A scatter plot of petal length against petal width, including a regression line.
+
+Both figures will be exported as PDF files.
 
 # 6. Tools
 
 - Python
 - Pandas
+- NumPy
 - Matplotlib
 - GitHub Pages
 
-## 7. Results
+## 7. Results and Discussion
 
-Results and interpretations will be added after the data analysis is completed.
+The results, mathematical interpretations and limitations will be added after completing the analyses.
 
-## 8. Website
+## 8. Project Website
 
-The public project website URL will be added here once the website is published.
+The website URL will be added after publication.
