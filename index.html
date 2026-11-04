@@ -100,8 +100,72 @@
       </p>
     </section>
 
+    
+<section>
+  <h2>3. Mathematical Background</h2>
+
+  <h3>3.1 Mean</h3>
+  <p>
+    The arithmetic mean measures the average value
+    of a numerical variable:
+  </p>
+  <p><strong>Mean = (x1 + x2 + ... + xn) / n</strong></p>
+  <p>
+    We calculate the mean petal length separately
+    for each iris species to compare their
+    typical flower measurements.
+  </p>
+
+  <h3>3.2 Sample Variance and Standard Deviation</h3>
+  <p>
+    Sample variance measures how far observations
+    are spread around their mean.
+  </p>
+  <p>
+    <strong>
+      Sample variance = Sum of (xi - mean)^2 / (n - 1)
+    </strong>
+  </p>
+  <p>
+    The sample standard deviation is the square
+    root of the sample variance.
+  </p>
+  <p>
+    A smaller standard deviation indicates that
+    petal lengths are more concentrated around
+    their average.
+  </p>
+
+  <h3>3.3 Linear Regression</h3>
+  <p>
+    Linear regression models the relationship
+    between two numerical variables using:
+  </p>
+  <p><strong>Predicted y = a + bx</strong></p>
+  <p>
+    Here, x represents petal length and y
+    represents petal width. Ordinary least
+    squares chooses a and b to minimize
+    the sum of squared prediction errors.
+  </p>
+
+  <h3>3.4 Coefficient of Determination</h3>
+  <p>
+    R-squared measures the proportion of
+    variation in the dependent variable
+    explained by the regression model.
+  </p>
+  <p>
+    <strong>R² = 1 - SSE / SST</strong>
+  </p>
+  <p>
+    SSE is the sum of squared residuals,
+    while SST is the total sum of squares.
+  </p>
+</section>
+
     <section>
-      <h2>3. Analysis One: Descriptive Statistics</h2>
+      <h2>4. Analysis One: Descriptive Statistics</h2>
       <p>
         The first analysis compares mean petal length, sample
         variance, and sample standard deviation across species.
@@ -123,7 +187,7 @@
     </section>
 
     <section>
-      <h2>4. Analysis Two: Linear Regression</h2>
+      <h2>5. Analysis Two: Linear Regression</h2>
       <p>
         Ordinary least squares (OLS) estimates the relationship
         between petal length (x) and petal width (y).
@@ -148,7 +212,7 @@
     </section>
 
     <section>
-      <h2>5. Conclusion</h2>
+      <h2>6. Conclusion</h2>
       <p>
         The analyses show clear differences in average petal
         length among iris species and a strong overall linear
