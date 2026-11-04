@@ -42,7 +42,11 @@
       border-radius: 10px;
       text-align: center;
     }
-    .stat strong { display: block; font-size: 27px; color: #214c8c; }
+    .stat strong {
+      display: block;
+      font-size: 27px;
+      color: #214c8c;
+    }
     .figure-link, .repo-link {
       display: inline-block;
       padding: 10px 17px;
@@ -52,12 +56,22 @@
       border-radius: 7px;
       text-decoration: none;
     }
-    .figure-link:hover, .repo-link:hover { background: #173c70; }
+    .figure-link:hover, .repo-link:hover {
+      background: #173c70;
+    }
     table { width: 100%; border-collapse: collapse; }
-    th, td { border-bottom: 1px solid #ddd; padding: 12px; text-align: left; }
+    th, td {
+      border-bottom: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
     th { background: #edf3fc; }
     code { background: #edf3fc; padding: 3px 6px; }
-    footer { text-align: center; padding: 28px; color: #65738a; }
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: #65738a;
+    }
   </style>
 </head>
 <body>
@@ -86,12 +100,14 @@
         Iris-setosa, Iris-versicolor, and Iris-virginica.
         Each flower has four numerical measurements in centimetres.
       </p>
+
       <div class="stat-grid">
         <div class="stat"><strong>150</strong>Observations</div>
         <div class="stat"><strong>3</strong>Species</div>
         <div class="stat"><strong>4</strong>Measurements</div>
         <div class="stat"><strong>0</strong>Missing values</div>
       </div>
+
       <p>
         Data source:
         <a href="https://archive.ics.uci.edu/dataset/53/iris">
@@ -100,119 +116,187 @@
       </p>
     </section>
 
-    
-<section>
-  <h2>3. Mathematical Background</h2>
+    <section>
+      <h2>3. Methodology</h2>
+      <p>
+        This project uses Python to investigate mathematical
+        patterns in the Iris dataset through two complementary
+        quantitative analyses.
+      </p>
 
-  <h3>3.1 Mean</h3>
-  <p>
-    The arithmetic mean measures the average value
-    of a numerical variable:
-  </p>
-  <p><strong>Mean = (x1 + x2 + ... + xn) / n</strong></p>
-  <p>
-    We calculate the mean petal length separately
-    for each iris species to compare their
-    typical flower measurements.
-  </p>
+      <h3>3.1 Data Preparation</h3>
+      <p>
+        The dataset contains 150 observations, with 50 flowers
+        belonging to each of the three iris species.
+        Petal length and petal width are measured in centimetres.
+      </p>
 
-  <h3>3.2 Sample Variance and Standard Deviation</h3>
-  <p>
-    Sample variance measures how far observations
-    are spread around their mean.
-  </p>
-  <p>
-    <strong>
-      Sample variance = Sum of (xi - mean)^2 / (n - 1)
-    </strong>
-  </p>
-  <p>
-    The sample standard deviation is the square
-    root of the sample variance.
-  </p>
-  <p>
-    A smaller standard deviation indicates that
-    petal lengths are more concentrated around
-    their average.
-  </p>
+      <h3>3.2 Descriptive Statistical Analysis</h3>
+      <p>
+        Flowers are grouped by species. For each group,
+        the sample mean, variance and standard deviation
+        of petal length are calculated.
+        These statistics help compare the typical petal
+        length and variability between species.
+      </p>
 
-  <h3>3.3 Linear Regression</h3>
-  <p>
-    Linear regression models the relationship
-    between two numerical variables using:
-  </p>
-  <p><strong>Predicted y = a + bx</strong></p>
-  <p>
-    Here, x represents petal length and y
-    represents petal width. Ordinary least
-    squares chooses a and b to minimize
-    the sum of squared prediction errors.
-  </p>
+      <h3>3.3 Linear Regression Analysis</h3>
+      <p>
+        An ordinary least squares regression is fitted
+        using petal length as the explanatory variable
+        and petal width as the response variable.
+        The regression coefficients and R-squared value
+        are used to evaluate the overall linear relationship.
+      </p>
 
-  <h3>3.4 Coefficient of Determination</h3>
-  <p>
-    R-squared measures the proportion of
-    variation in the dependent variable
-    explained by the regression model.
-  </p>
-  <p>
-    <strong>R² = 1 - SSE / SST</strong>
-  </p>
-  <p>
-    SSE is the sum of squared residuals,
-    while SST is the total sum of squares.
-  </p>
-</section>
+      <h3>3.4 Visualisation</h3>
+      <p>
+        Two figures are generated using Python:
+        a comparison of petal lengths across species
+        and a scatter plot with the fitted regression line.
+        Both figures are exported as PDF files.
+      </p>
+    </section>
 
     <section>
-      <h2>4. Analysis One: Descriptive Statistics</h2>
+      <h2>4. Mathematical Background</h2>
+
+      <h3>4.1 Mean</h3>
+      <p>
+        The arithmetic mean measures the average value
+        of a numerical variable:
+      </p>
+      <p><strong>Mean = (x1 + x2 + ... + xn) / n</strong></p>
+      <p>
+        We calculate the mean petal length separately
+        for each iris species to compare their
+        typical flower measurements.
+      </p>
+
+      <h3>4.2 Sample Variance and Standard Deviation</h3>
+      <p>
+        Sample variance measures how far observations
+        are spread around their mean.
+      </p>
+      <p>
+        <strong>
+          Sample variance = Sum of (xi - mean)^2 / (n - 1)
+        </strong>
+      </p>
+      <p>
+        The sample standard deviation is the square
+        root of the sample variance.
+      </p>
+      <p>
+        A smaller standard deviation indicates that
+        petal lengths are more concentrated around
+        their average.
+      </p>
+
+      <h3>4.3 Linear Regression</h3>
+      <p>
+        Linear regression models the relationship
+        between two numerical variables using:
+      </p>
+      <p><strong>Predicted y = a + bx</strong></p>
+      <p>
+        Here, x represents petal length and y
+        represents petal width. Ordinary least
+        squares chooses a and b to minimize
+        the sum of squared prediction errors.
+      </p>
+
+      <h3>4.4 Coefficient of Determination</h3>
+      <p>
+        R-squared measures the proportion of
+        variation in the dependent variable
+        explained by the regression model.
+      </p>
+      <p><strong>R² = 1 - SSE / SST</strong></p>
+      <p>
+        SSE is the sum of squared residuals,
+        while SST is the total sum of squares.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Analysis One: Descriptive Statistics</h2>
       <p>
         The first analysis compares mean petal length, sample
         variance, and sample standard deviation across species.
       </p>
+
       <table>
-        <tr><th>Species</th><th>Mean (cm)</th><th>SD (cm)</th></tr>
-        <tr><td>Setosa</td><td>1.464</td><td>0.174</td></tr>
-        <tr><td>Versicolor</td><td>4.260</td><td>0.470</td></tr>
-        <tr><td>Virginica</td><td>5.552</td><td>0.552</td></tr>
+        <tr>
+          <th>Species</th>
+          <th>Mean (cm)</th>
+          <th>SD (cm)</th>
+        </tr>
+        <tr>
+          <td>Setosa</td>
+          <td>1.464</td>
+          <td>0.174</td>
+        </tr>
+        <tr>
+          <td>Versicolor</td>
+          <td>4.260</td>
+          <td>0.470</td>
+        </tr>
+        <tr>
+          <td>Virginica</td>
+          <td>5.552</td>
+          <td>0.552</td>
+        </tr>
       </table>
+
       <p>
         Setosa has the shortest petals on average, while Virginica
         has the longest. The standard deviation also increases
         across these three species.
       </p>
-      <a class="figure-link" href="Figure1_Petal_Length.pdf" target="_blank">
+
+      <a class="figure-link"
+         href="Figure1_Petal_Length.pdf" target="_blank">
         View Figure 1 (PDF)
       </a>
     </section>
 
     <section>
-      <h2>5. Analysis Two: Linear Regression</h2>
+      <h2>6. Analysis Two: Linear Regression</h2>
       <p>
         Ordinary least squares (OLS) estimates the relationship
         between petal length (x) and petal width (y).
       </p>
+
       <p><strong>Estimated equation:</strong></p>
-      <p><code>Predicted petal width = 0.4164 × petal length − 0.3665</code></p>
+      <p>
+        <code>
+          Predicted petal width = 0.4164 × petal length − 0.3665
+        </code>
+      </p>
       <p><strong>R² = 0.9269</strong></p>
+
       <p>
         Approximately 92.69% of the variation in petal width
         is explained by petal length in this pooled linear model.
         The positive slope indicates that flowers with longer
         petals tend to have wider petals.
       </p>
+
       <p>
         Because the model combines all three species, the strong
         relationship does not by itself establish how accurately
         individual flowers can be classified.
       </p>
-      <a class="figure-link" href="Figure2_Linear_Regression.pdf" target="_blank">
+
+      <a class="figure-link"
+         href="Figure2_Linear_Regression.pdf" target="_blank">
         View Figure 2 (PDF)
       </a>
     </section>
 
     <section>
-      <h2>6. Conclusion</h2>
+      <h2>7. Conclusion</h2>
       <p>
         The analyses show clear differences in average petal
         length among iris species and a strong overall linear
@@ -227,11 +311,12 @@
     </section>
 
     <section>
-      <h2>6. Reproducibility</h2>
+      <h2>8. Reproducibility</h2>
       <p>
         The public GitHub repository contains the original
         dataset, Python notebook, and two PDF figures.
       </p>
+
       <a class="repo-link"
          href="https://github.com/phuonglynguyenorient-web/advanced-math-iris-project">
         View GitHub Repository
@@ -239,6 +324,8 @@
     </section>
   </main>
 
-  <footer>Advanced Mathematics Project | Iris Dataset Analysis</footer>
+  <footer>
+    Advanced Mathematics Project | Iris Dataset Analysis
+  </footer>
 </body>
 </html>
